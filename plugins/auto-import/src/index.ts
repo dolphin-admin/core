@@ -1,21 +1,7 @@
-import { utilsPreset } from './presets'
+import { utilsPreset, antdPreset, antdIconsPreset } from './presets'
+import type { InlinePreset } from 'unimport'
+import type { ImportsMap } from 'unplugin-auto-import/types'
 
-const clsxPreset = {
-  from: 'clsx',
-  imports: [['default', 'clsx']]
-}
+export const dolphinAdminPresets: (ImportsMap | InlinePreset)[] = [utilsPreset]
 
-const tanstackQueryPreset = {
-  from: '@tanstack/react-query',
-  imports: ['useQueryClient', 'useQuery', 'useMutation']
-}
-
-export const reactPreset = [
-  'react',
-  'react-router-dom',
-  'react-i18next',
-  'ahooks',
-  tanstackQueryPreset,
-  clsxPreset,
-  utilsPreset
-]
+export { antdPreset, antdIconsPreset }

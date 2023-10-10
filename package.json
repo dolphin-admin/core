@@ -6,6 +6,9 @@
     "dev": "pnpm -r --parallel --filter=\"./packages/*\" --filter=\"./plugins/*\" dev",
     "build": "pnpm -r --filter=\"./packages/*\" --filter=\"./plugins/*\" build",
     "playground:dev": "pnpm --filter=playground dev",
+    "release:generate": "pnpm changeset",
+    "release:version": "pnpm changeset version",
+    "release:publish": "pnpm changeset publish",
     "preinstall": "npx only-allow pnpm"
   },
   "devDependencies": {
