@@ -1,5 +1,11 @@
 # @dolphin-admin/auto-import
 
+## 0.0.6
+
+### Patch Changes
+
+- update code base
+
 ## 0.0.5
 
 ### Patch Changes
