@@ -1,0 +1,40 @@
+{
+  "name": "@dolphin-admin/utils",
+  "version": "0.0.3",
+  "description": "Universal utils for Dolphin Admin.",
+  "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bit-ocean-studio/dolphin-admin-core.git",
+    "directory": "packages/utils"
+  },
+  "homepage": "https://github.com/bit-ocean-studio/dolphin-admin-core#readme",
+  "bugs": "https://github.com/bit-ocean-studio/dolphin-admin-core/issues",
+  "keywords": [
+    "dolphin-admin",
+    "utils"
+  ],
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "unbuild --stub",
+    "build": "unbuild",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "pnpm run build"
+  },
+  "dependencies": {
+    "dayjs": "^1.11.10"
+  },
+  "license": "MIT"
+}
