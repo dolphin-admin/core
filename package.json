@@ -23,7 +23,8 @@
     "commitizen": "^4.3.0",
     "cspell": "^7.3.7",
     "cz-git": "^1.7.1",
-    "husky": "^8.0.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^14.0.1",
     "prettier": "^3.0.3",
     "typescript": "^5.2.2",
     "unbuild": "^2.0.0"

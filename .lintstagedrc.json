@@ -1,4 +1,4 @@
 {
   "**/*.{js,ts}": [ "prettier --write"],
-  "**/*.{md}": ["prettier --write"]
+  "**/*.md": ["prettier --write"]
 }
