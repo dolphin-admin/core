@@ -14,6 +14,9 @@
     "dolphin-admin",
     "auto-import"
   ],
+  "files": [
+    "dist"
+  ],
   "type": "module",
   "exports": {
     ".": {
@@ -24,9 +27,6 @@
   },
   "main": "./dist/index.cjs",
   "types": "./dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
   "scripts": {
     "dev": "unbuild --stub",
     "build": "unbuild",
