@@ -29,3 +29,5 @@ coverage
 *.sln
 *.sw?
 *.zip
+
+doc_build

@@ -21,6 +21,8 @@
     "**/**/CONTRIBUTORS.md",
     "pnpm-lock.yaml",
     "README.md",
-    "playground/**"
+    "playground/**",
+    "doc_build",
+    "docs"
   ]
 }

@@ -1,6 +1,7 @@
 antd
 Antd
 preinstall
+rspress
 typecheck
 unimport
 unplugin
