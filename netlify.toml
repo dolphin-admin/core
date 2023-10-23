@@ -4,7 +4,7 @@
 
 [build]
   publish = "doc_build"
-  command = "pnpm run build"
+  command = "pnpm run docs:build"
 
 [functions]
   node_bundler = "esbuild"
