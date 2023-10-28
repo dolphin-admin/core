@@ -1,6 +1,8 @@
 antd
 Antd
 esbuild
+juejin
+nestjs
 preinstall
 rspress
 typecheck
