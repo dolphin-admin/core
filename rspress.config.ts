@@ -8,6 +8,11 @@ export default defineConfig({
   icon: '/dolphin-admin.png',
   logo: '/dolphin-admin.png',
   lang: 'en',
+  builderConfig: {
+    dev: {
+      port: 4065
+    }
+  },
   themeConfig: {
     locales: [
       {

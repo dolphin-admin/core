@@ -1,1 +1,6 @@
-[{ "type": "dir", "name": "getting-started", "label": "开始" }]
+[
+  { "type": "dir", "name": "getting-started", "label": "开始" },
+  { "type": "dir", "name": "react", "label": "React" },
+  { "type": "dir", "name": "vue", "label": "Vue" },
+  { "type": "dir", "name": "nest", "label": "Nest" }
+]
