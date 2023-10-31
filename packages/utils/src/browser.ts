@@ -109,7 +109,7 @@ export class BrowserUtils {
 
   /**
    * 解决 Naive UI 样式冲突问题
-   * @description 注意：需要在挂载 Vue App 之前调用
+   * @description 注意：需要在挂载 App 之前调用
    * @example
    * ```ts
    * BrowserUtils.resolveNaiveStyle()

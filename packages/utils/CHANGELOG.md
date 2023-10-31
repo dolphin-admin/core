@@ -1,5 +1,11 @@
 # @dolphin-admin/utils
 
+## 0.0.10
+
+### Patch Changes
+
+- fix typo
+
 ## 0.0.9
 
 ### Patch Changes
