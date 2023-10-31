@@ -1,5 +1,12 @@
 # @dolphin-admin/utils
 
+## 0.0.9
+
+### Patch Changes
+
+- fix BrowserUtils static methods bug
+- 9b8b273: add methods in BrowserUtils
+
 ## 0.0.8
 
 ### Patch Changes

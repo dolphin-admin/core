@@ -1,12 +1,16 @@
 import dayjs from 'dayjs'
 
-import type { TimeFormatter } from '../types'
+import type { TimeFormatter } from './types'
 
 export class TimeUtils {
   /**
    * 格式化时间
    * @param time 时间
    * @param format 格式
+   * @example
+   * ```ts
+   * TimeUtils.formatTime(new Date(), 'YYYY-MM-DD HH:mm:ss')
+   * ```
    */
   static formatTime(
     time: string | number | Date,
@@ -23,6 +27,10 @@ export class TimeUtils {
    * @description 该方法的参数可以是 Date 对象，也可以是时间字符串
    * - 如果是字符串，会转换为 Date，然后再转换为时间戳
    * - 如果是 Date 对象，会转换为时间戳
+   * @example
+   * ```ts
+   * TimeUtils.getDuration('2023-09-20 00:00:00', '2023-09-20 23:59:59')
+   * ```
    */
   static getDuration(start?: string | Date, end?: string | Date): number {
     if (!start || !end) return 0

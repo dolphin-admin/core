@@ -1,4 +1,4 @@
-import type { ScrollOptions } from './private'
+import type { ScrollOptions } from './types'
 
 export class BrowserUtils {
   /**
@@ -57,7 +57,7 @@ export class BrowserUtils {
    * BrowserUtils.loadFavicon()
    * ```
    */
-  static loadFavicon(url?: string): BrowserUtils {
+  static loadFavicon(url?: string) {
     const faviconUrl = url ?? '/favicon.ico'
 
     let faviconElement = document.querySelector(
@@ -72,7 +72,6 @@ export class BrowserUtils {
       faviconElement.href = faviconUrl
       document.head.appendChild(faviconElement)
     }
-    return this
   }
 
   /**
@@ -83,7 +82,7 @@ export class BrowserUtils {
    * BrowserUtils.disableGestureScale()
    * ```
    */
-  static disableGestureScale(): BrowserUtils {
+  static disableGestureScale() {
     document.addEventListener(
       'gesturestart',
       (event) => {
@@ -106,7 +105,6 @@ export class BrowserUtils {
     document.addEventListener('gesturestart', (event) => {
       event.preventDefault()
     })
-    return this
   }
 
   /**
@@ -118,11 +116,10 @@ export class BrowserUtils {
    * @see
    * - [Naive UI - 样式冲突](https://www.naiveui.com/en-US/os-theme/docs/style-conflict)
    */
-  static resolveNaiveStyle(): BrowserUtils {
+  static resolveNaiveStyle() {
     const meta = document.createElement('meta')
     meta.name = 'naive-ui-style'
     document.head.appendChild(meta)
-    return this
   }
 
   /**
