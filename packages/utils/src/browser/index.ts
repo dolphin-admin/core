@@ -2,14 +2,6 @@ import type { ScrollOptions } from './private'
 
 export class BrowserUtils {
   /**
-   * 复制到剪切板
-   * @param text 需要复制的文本
-   */
-  static setClipBoardText(text: string): Promise<void> {
-    return navigator.clipboard.writeText(text)
-  }
-
-  /**
    * 打开新窗口
    * @param url 目标地址 URL
    */
@@ -19,6 +11,14 @@ export class BrowserUtils {
       w.opener = null
       w.location.href = url
     }
+  }
+
+  /**
+   * 复制到剪切板
+   * @param text 需要复制的文本
+   */
+  static setClipBoardText(text: string): Promise<void> {
+    return navigator.clipboard.writeText(text)
   }
 
   /**
@@ -37,8 +37,37 @@ export class BrowserUtils {
    * 判定是否是移动端
    * @description 响应式请使用 useMediaQuery
    */
-  static isMobileDevice() {
+  static isMobile(): boolean {
     return window.matchMedia('only screen and (max-width: 640px)').matches
+  }
+
+  /**
+   * 禁止手势缩放
+   * @description 该方法用于禁止移动端手势缩放，以提高更好的用户体验。适配 Web 手机端页面，在页面初始化的时候调用即可。
+   */
+  static disableGestureScale() {
+    document.addEventListener(
+      'gesturestart',
+      (event) => {
+        event.preventDefault()
+      },
+      false
+    )
+    let lastTouchEnd = 0
+    document.documentElement.addEventListener(
+      'touchend',
+      (event) => {
+        const now = Date.now()
+        if (now - lastTouchEnd <= 300) {
+          event.preventDefault()
+        }
+        lastTouchEnd = now
+      },
+      false
+    )
+    document.addEventListener('gesturestart', (event) => {
+      event.preventDefault()
+    })
   }
 
   /**

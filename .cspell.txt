@@ -1,6 +1,7 @@
 antd
 Antd
 esbuild
+gesturestart
 juejin
 nestjs
 preinstall

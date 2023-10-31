@@ -10,7 +10,7 @@ importers:
     dependencies:
       rspress:
         specifier: ^1.2.1
-        version: 1.2.1(react-dom@18.2.0)(react@18.2.0)(ts-node@10.9.1)(typescript@5.2.2)(webpack@5.89.0)
+        version: 1.2.1(react-dom@18.2.0)(react@18.2.0)(typescript@5.2.2)(webpack@5.89.0)
     devDependencies:
       '@changesets/cli':
         specifier: ^2.26.2
@@ -26,7 +26,7 @@ importers:
         version: 20.8.9
       commitizen:
         specifier: ^4.3.0
-        version: 4.3.0
+        version: 4.3.0(typescript@5.2.2)
       cspell:
         specifier: ^7.3.8
         version: 7.3.8
@@ -138,7 +138,7 @@ packages:
       '@babel/helpers': 7.23.1
       '@babel/parser': 7.23.0
       '@babel/template': 7.22.15
-      '@babel/traverse': 7.23.2
+      '@babel/traverse': 7.23.0
       '@babel/types': 7.23.0
       convert-source-map: 2.0.0
       debug: 4.3.4
@@ -456,7 +456,7 @@ packages:
     engines: {node: '>=6.9.0'}
     dependencies:
       '@babel/template': 7.22.15
-      '@babel/traverse': 7.23.2
+      '@babel/traverse': 7.23.0
       '@babel/types': 7.23.0
     transitivePeerDependencies:
       - supports-color
@@ -2521,8 +2521,8 @@ packages:
       '@babel/parser': 7.23.0
       '@babel/types': 7.23.0
 
-  /@babel/traverse@7.23.2:
-    resolution: {integrity: sha512-azpe59SQ48qG6nu2CzcMLbxUudtN+dOM9kDbUqGq3HXUJRlo7i8fvPoxQUzYgLZ4cMVmuZgm8vvBpNeRhd6XSw==}
+  /@babel/traverse@7.23.0:
+    resolution: {integrity: sha512-t/QaEvyIoIkwzpiZ7aoSKK8kObQYeF7T2v+dazAYCb8SXtp58zEVkWW7zAnju8FNKNdr4ScAOEDmMItbyOmEYw==}
     engines: {node: '>=6.9.0'}
     dependencies:
       '@babel/code-frame': 7.22.13
@@ -2774,16 +2774,6 @@ packages:
       conventional-changelog-conventionalcommits: 7.0.2
     dev: true
 
-  /@commitlint/config-validator@18.0.0:
-    resolution: {integrity: sha512-PlXy5QZzQeMgQM7jb0odIhxsI6GWcbGgfy+Hkz5ap31KES/oJgtEvgD8pjg0Z9Ri296bT6zK3ts6brS0MAcMgg==}
-    engines: {node: '>=v18'}
-    requiresBuild: true
-    dependencies:
-      '@commitlint/types': 18.0.0
-      ajv: 8.12.0
-    dev: true
-    optional: true
-
   /@commitlint/config-validator@18.1.0:
     resolution: {integrity: sha512-kbHkIuItXn93o2NmTdwi5Mk1ujyuSIysRE/XHtrcps/27GuUKEIqBJp6TdJ4Sq+ze59RlzYSHMKuDKZbfg9+uQ==}
     engines: {node: '>=v18'}
@@ -2803,13 +2793,6 @@ packages:
       lodash.startcase: 4.4.0
       lodash.upperfirst: 4.3.1
     dev: true
-
-  /@commitlint/execute-rule@18.0.0:
-    resolution: {integrity: sha512-eNUSaHajb+g3sgZeIrfc6cXNnKIkYN2SXtDVXuiE+hOa055T0bLdZK29gSd945JCztxPVwdOkPLDeLg3NfDubg==}
-    engines: {node: '>=v18'}
-    requiresBuild: true
-    dev: true
-    optional: true
 
   /@commitlint/execute-rule@18.1.0:
     resolution: {integrity: sha512-w3Vt4K+O7+nSr9/gFSEfZ1exKUOPSlJaRpnk7Y+XowEhvwT7AIk1HNANH+gETf0zGZ020+hfiMW/Ome+SNCUsg==}
@@ -2841,31 +2824,6 @@ packages:
       '@commitlint/rules': 18.1.0
       '@commitlint/types': 18.1.0
     dev: true
-
-  /@commitlint/load@18.0.0:
-    resolution: {integrity: sha512-ocvMSkzNZCJ4yV673xjd4Y7sFVG/mg7S6yvL5ioM0OIG2XTbcCdzpmq+BeJcIwsRYU9g/b688yh7RDzGlbai6w==}
-    engines: {node: '>=v18'}
-    requiresBuild: true
-    dependencies:
-      '@commitlint/config-validator': 18.0.0
-      '@commitlint/execute-rule': 18.0.0
-      '@commitlint/resolve-extends': 18.0.0
-      '@commitlint/types': 18.0.0
-      '@types/node': 18.18.6
-      chalk: 4.1.2
-      cosmiconfig: 8.0.0
-      cosmiconfig-typescript-loader: 4.4.0(@types/node@18.18.6)(cosmiconfig@8.0.0)(ts-node@10.9.1)(typescript@5.2.2)
-      lodash.isplainobject: 4.0.6
-      lodash.merge: 4.6.2
-      lodash.uniq: 4.5.0
-      resolve-from: 5.0.0
-      ts-node: 10.9.1(@types/node@20.8.9)(typescript@5.2.2)
-      typescript: 5.2.2
-    transitivePeerDependencies:
-      - '@swc/core'
-      - '@swc/wasm'
-    dev: true
-    optional: true
 
   /@commitlint/load@18.2.0(typescript@5.2.2):
     resolution: {integrity: sha512-xjX3d3CRlOALwImhOsmLYZh14/+gW/KxsY7+bPKrzmGuFailf9K7ckhB071oYZVJdACnpY4hDYiosFyOC+MpAA==}
@@ -2912,20 +2870,6 @@ packages:
       minimist: 1.2.8
     dev: true
 
-  /@commitlint/resolve-extends@18.0.0:
-    resolution: {integrity: sha512-MD9+6GSiWvqgdJtfos+1gqz+zmy2vV7TbUVz2ETZzpfECgmUZSZSYzyivivBAQK6feS71KxmMLL8+YFF9+FFRQ==}
-    engines: {node: '>=v18'}
-    requiresBuild: true
-    dependencies:
-      '@commitlint/config-validator': 18.0.0
-      '@commitlint/types': 18.0.0
-      import-fresh: 3.3.0
-      lodash.mergewith: 4.6.2
-      resolve-from: 5.0.0
-      resolve-global: 1.0.0
-    dev: true
-    optional: true
-
   /@commitlint/resolve-extends@18.1.0:
     resolution: {integrity: sha512-3mZpzOEJkELt7BbaZp6+bofJyxViyObebagFn0A7IHaLARhPkWTivXdjvZHS12nAORftv88Yhbh8eCPKfSvB7g==}
     engines: {node: '>=v18'}
@@ -2960,15 +2904,6 @@ packages:
     dependencies:
       find-up: 5.0.0
     dev: true
-
-  /@commitlint/types@18.0.0:
-    resolution: {integrity: sha512-FDzAdSm7kIir0NW0bZLENdrEgf/9Ihs1AAqE9DK9R+dRFby4ookkxPMaz7elZmG+e5rBl7hGrWJzJINqG9cDDg==}
-    engines: {node: '>=v18'}
-    requiresBuild: true
-    dependencies:
-      chalk: 4.1.2
-    dev: true
-    optional: true
 
   /@commitlint/types@18.1.0:
     resolution: {integrity: sha512-65vGxZmbs+2OVwEItxhp3Ul7X2m2LyLfifYI/NdPwRqblmuES2w2aIRhIjb7cwUIBHHSTT8WXj4ixVHQibmvLQ==}
@@ -3264,13 +3199,6 @@ packages:
     resolution: {integrity: sha512-qNnt2wG45wb8JP54mENarnQgxfSYKPp3zlYID/2przbMNmVJRqUlcIBOdLI6plCgGeNkzJTl3T9T1ATbnN+LLw==}
     engines: {node: '>=16'}
     dev: true
-
-  /@cspotcode/source-map-support@0.8.1:
-    resolution: {integrity: sha512-IchNf6dN4tHoMFIn/7OE8LWZ19Y6q/67Bmf6vnGREv8RSbBVb9LPJxEcnwrcwX6ixSvaiGoomAUvu4YSxXrVgw==}
-    engines: {node: '>=12'}
-    requiresBuild: true
-    dependencies:
-      '@jridgewell/trace-mapping': 0.3.9
 
   /@esbuild/android-arm64@0.17.19:
     resolution: {integrity: sha512-KBMWvEZooR7+kzY0BtbTQn0OAYY7CsiydT63pVEaPtVYF0hXbUaOyZog37DKxK7NF3XacBJOpYT4adIJh+avxA==}
@@ -3917,13 +3845,6 @@ packages:
       '@jridgewell/resolve-uri': 3.1.1
       '@jridgewell/sourcemap-codec': 1.4.15
 
-  /@jridgewell/trace-mapping@0.3.9:
-    resolution: {integrity: sha512-3Belt6tdc8bPgAtbcmdtNJlirVoTmEb5e2gC94PnkwEW9jI6CAHUeoG85tjWP5WquqfavoMtMwiG4P926ZKKuQ==}
-    requiresBuild: true
-    dependencies:
-      '@jridgewell/resolve-uri': 3.1.1
-      '@jridgewell/sourcemap-codec': 1.4.15
-
   /@loadable/component@5.15.2(react@18.2.0):
     resolution: {integrity: sha512-ryFAZOX5P2vFkUdzaAtTG88IGnr9qxSdvLRvJySXcUA4B4xVWurUNADu3AnKPksxOZajljqTrDEDcYjeL4lvLw==}
     engines: {node: '>=8'}
@@ -4022,14 +3943,14 @@ packages:
       resolve: 1.22.6
     dev: false
 
-  /@modern-js/builder-rspack-provider@2.38.0(react-dom@18.2.0)(react@18.2.0)(ts-node@10.9.1)(typescript@5.2.2):
+  /@modern-js/builder-rspack-provider@2.38.0(react-dom@18.2.0)(react@18.2.0)(typescript@5.2.2):
     resolution: {integrity: sha512-YZgsAGiuH317EeQXd1h6KDYr0vZ+F5tDp9Au4KfqaMXlcv3I7/cVfCXsP2z7wZZB7HwSvEDsRA+fEFyXG3tjFQ==}
     engines: {node: '>=14.0.0'}
     dependencies:
       '@babel/core': 7.23.2
       '@babel/preset-typescript': 7.23.2(@babel/core@7.23.2)
-      '@modern-js/builder-shared': 2.38.0(react-dom@18.2.0)(react@18.2.0)(ts-node@10.9.1)(typescript@5.2.2)
-      '@modern-js/server': 2.38.0(react-dom@18.2.0)(react@18.2.0)(ts-node@10.9.1)
+      '@modern-js/builder-shared': 2.38.0(react-dom@18.2.0)(react@18.2.0)(typescript@5.2.2)
+      '@modern-js/server': 2.38.0(react-dom@18.2.0)(react@18.2.0)
       '@modern-js/types': 2.38.0
       '@modern-js/utils': 2.38.0
       '@rspack/core': 0.3.8
@@ -4073,7 +3994,7 @@ packages:
       - webpack-plugin-serve
     dev: false
 
-  /@modern-js/builder-shared@2.38.0(react-dom@18.2.0)(react@18.2.0)(ts-node@10.9.1)(typescript@5.2.2):
+  /@modern-js/builder-shared@2.38.0(react-dom@18.2.0)(react@18.2.0)(typescript@5.2.2):
     resolution: {integrity: sha512-/ycdkCkMChqGcbzFfAzwwppFBfAwOpM64RnTtGQjwE22HtJmBIDz0i2vJ/A87Y9qmTdu08KKV5PjLxZ7Ofv5Lg==}
     engines: {node: '>=14.0.0'}
     dependencies:
@@ -4081,7 +4002,7 @@ packages:
       '@babel/parser': 7.23.0
       '@babel/types': 7.23.0
       '@modern-js/prod-server': 2.38.0(react-dom@18.2.0)(react@18.2.0)
-      '@modern-js/server': 2.38.0(react-dom@18.2.0)(react@18.2.0)(ts-node@10.9.1)
+      '@modern-js/server': 2.38.0(react-dom@18.2.0)(react@18.2.0)
       '@modern-js/types': 2.38.0
       '@modern-js/utils': 2.38.0
       '@swc/helpers': 0.5.1
@@ -4122,11 +4043,11 @@ packages:
       - webpack-cli
     dev: false
 
-  /@modern-js/builder@2.38.0(react-dom@18.2.0)(react@18.2.0)(ts-node@10.9.1)(typescript@5.2.2):
+  /@modern-js/builder@2.38.0(react-dom@18.2.0)(react@18.2.0)(typescript@5.2.2):
     resolution: {integrity: sha512-KDtz3UVaOL6v2dmZPXNcEE0IRkwcQmHrwN3faZYD6Oc8vGQfbsOKinb6FSmj01vLFe2GqTdws869Zod4KmwooQ==}
     engines: {node: '>=14.0.0'}
     dependencies:
-      '@modern-js/builder-shared': 2.38.0(react-dom@18.2.0)(react@18.2.0)(ts-node@10.9.1)(typescript@5.2.2)
+      '@modern-js/builder-shared': 2.38.0(react-dom@18.2.0)(react@18.2.0)(typescript@5.2.2)
       '@modern-js/utils': 2.38.0
       '@rsbuild/monorepo-utils': 0.0.7
       '@svgr/webpack': 8.0.1(typescript@5.2.2)
@@ -4245,7 +4166,7 @@ packages:
       - supports-color
     dev: false
 
-  /@modern-js/server@2.38.0(react-dom@18.2.0)(react@18.2.0)(ts-node@10.9.1):
+  /@modern-js/server@2.38.0(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-+ncMmhc6ZJIz8w48q19TTQmH0BkuYYHrtCZ7NK3+dINQHJRDQ7iUJxz3soaA/TtmiiM60butCGmMcYqt84FQUg==}
     peerDependencies:
       devcert: ^1.0.0
@@ -4272,7 +4193,6 @@ packages:
       http-compression: 1.0.6
       minimatch: 3.1.2
       path-to-regexp: 6.2.1
-      ts-node: 10.9.1(@types/node@20.8.9)(typescript@5.2.2)
       ws: 8.14.2
     transitivePeerDependencies:
       - '@babel/traverse'
@@ -4668,7 +4588,7 @@ packages:
       - webpack-plugin-serve
     dev: false
 
-  /@rspress/core@1.2.1(rspress@1.2.1)(ts-node@10.9.1)(typescript@5.2.2)(webpack@5.89.0):
+  /@rspress/core@1.2.1(rspress@1.2.1)(typescript@5.2.2)(webpack@5.89.0):
     resolution: {integrity: sha512-ObXso1yUHZRO7mIJae4vQmJu0/XNW8zxTbAwsFH7rVlXxQ0wjoUTUeoA3UzcsAUxta+UxCH8VnBYip91nGNNdg==}
     engines: {node: '>=14.17.6'}
     dependencies:
@@ -4676,15 +4596,15 @@ packages:
       '@mdx-js/loader': 2.2.1(webpack@5.89.0)
       '@mdx-js/mdx': 2.2.1
       '@mdx-js/react': 2.2.1(react@18.2.0)
-      '@modern-js/builder': 2.38.0(react-dom@18.2.0)(react@18.2.0)(ts-node@10.9.1)(typescript@5.2.2)
-      '@modern-js/builder-rspack-provider': 2.38.0(react-dom@18.2.0)(react@18.2.0)(ts-node@10.9.1)(typescript@5.2.2)
+      '@modern-js/builder': 2.38.0(react-dom@18.2.0)(react@18.2.0)(typescript@5.2.2)
+      '@modern-js/builder-rspack-provider': 2.38.0(react-dom@18.2.0)(react@18.2.0)(typescript@5.2.2)
       '@modern-js/utils': 2.38.0
       '@rspress/mdx-rs': 0.4.1
-      '@rspress/plugin-auto-nav-sidebar': 1.2.1(react-dom@18.2.0)(react@18.2.0)(rspress@1.2.1)(ts-node@10.9.1)(typescript@5.2.2)
-      '@rspress/plugin-container-syntax': 1.2.1(react-dom@18.2.0)(react@18.2.0)(rspress@1.2.1)(ts-node@10.9.1)(typescript@5.2.2)
+      '@rspress/plugin-auto-nav-sidebar': 1.2.1(react-dom@18.2.0)(react@18.2.0)(rspress@1.2.1)(typescript@5.2.2)
+      '@rspress/plugin-container-syntax': 1.2.1(react-dom@18.2.0)(react@18.2.0)(rspress@1.2.1)(typescript@5.2.2)
       '@rspress/plugin-last-updated': 1.2.1(rspress@1.2.1)
       '@rspress/plugin-medium-zoom': 1.2.1(rspress@1.2.1)
-      '@rspress/shared': 1.2.1(react-dom@18.2.0)(react@18.2.0)(ts-node@10.9.1)(typescript@5.2.2)
+      '@rspress/shared': 1.2.1(react-dom@18.2.0)(react@18.2.0)(typescript@5.2.2)
       '@types/compression': 1.7.4
       '@types/polka': 0.5.6
       autoprefixer: 10.4.13(postcss@8.4.21)
@@ -4725,7 +4645,7 @@ packages:
       sirv: 2.0.3
       source-map: 0.7.4
       string-replace-loader: 3.1.0(webpack@5.89.0)
-      tailwindcss: 3.2.7(postcss@8.4.21)(ts-node@10.9.1)
+      tailwindcss: 3.2.7(postcss@8.4.21)
       unified: 10.1.2
       unist-util-visit: 4.1.2
       unist-util-visit-children: 2.0.2
@@ -4857,15 +4777,15 @@ packages:
       '@rspress/mdx-rs-win32-x64-msvc': 0.4.1
     dev: false
 
-  /@rspress/plugin-auto-nav-sidebar@1.2.1(react-dom@18.2.0)(react@18.2.0)(rspress@1.2.1)(ts-node@10.9.1)(typescript@5.2.2):
+  /@rspress/plugin-auto-nav-sidebar@1.2.1(react-dom@18.2.0)(react@18.2.0)(rspress@1.2.1)(typescript@5.2.2):
     resolution: {integrity: sha512-jEfQcHBzglZfx5fMD38BHRJYTOevFTplAybPofWSfCE51I7Yy/d+/rfa2I+TBj070/AXw0uSwiusqlMtE1loYA==}
     engines: {node: '>=14.17.6'}
     peerDependencies:
       rspress: ^1.0.2
     dependencies:
       '@modern-js/utils': 2.38.0
-      '@rspress/shared': 1.2.1(react-dom@18.2.0)(react@18.2.0)(ts-node@10.9.1)(typescript@5.2.2)
-      rspress: 1.2.1(react-dom@18.2.0)(react@18.2.0)(ts-node@10.9.1)(typescript@5.2.2)(webpack@5.89.0)
+      '@rspress/shared': 1.2.1(react-dom@18.2.0)(react@18.2.0)(typescript@5.2.2)
+      rspress: 1.2.1(react-dom@18.2.0)(react@18.2.0)(typescript@5.2.2)(webpack@5.89.0)
     transitivePeerDependencies:
       - '@babel/traverse'
       - '@parcel/css'
@@ -4896,14 +4816,14 @@ packages:
       - webpack-plugin-serve
     dev: false
 
-  /@rspress/plugin-container-syntax@1.2.1(react-dom@18.2.0)(react@18.2.0)(rspress@1.2.1)(ts-node@10.9.1)(typescript@5.2.2):
+  /@rspress/plugin-container-syntax@1.2.1(react-dom@18.2.0)(react@18.2.0)(rspress@1.2.1)(typescript@5.2.2):
     resolution: {integrity: sha512-xPt5OGQtRISxEXpvYlV9eFKGoNCRugdF08uyGmc+2e10TrY9hFQJCmYv6f/ZDsadGoK5XlB1oblf3znfOsDRig==}
     engines: {node: '>=14.17.6'}
     peerDependencies:
       rspress: ^1.0.2
     dependencies:
-      '@rspress/shared': 1.2.1(react-dom@18.2.0)(react@18.2.0)(ts-node@10.9.1)(typescript@5.2.2)
-      rspress: 1.2.1(react-dom@18.2.0)(react@18.2.0)(ts-node@10.9.1)(typescript@5.2.2)(webpack@5.89.0)
+      '@rspress/shared': 1.2.1(react-dom@18.2.0)(react@18.2.0)(typescript@5.2.2)
+      rspress: 1.2.1(react-dom@18.2.0)(react@18.2.0)(typescript@5.2.2)(webpack@5.89.0)
     transitivePeerDependencies:
       - '@babel/traverse'
       - '@parcel/css'
@@ -4941,7 +4861,7 @@ packages:
       rspress: ^1.0.2
     dependencies:
       '@modern-js/utils': 2.38.0
-      rspress: 1.2.1(react-dom@18.2.0)(react@18.2.0)(ts-node@10.9.1)(typescript@5.2.2)(webpack@5.89.0)
+      rspress: 1.2.1(react-dom@18.2.0)(react@18.2.0)(typescript@5.2.2)(webpack@5.89.0)
     dev: false
 
   /@rspress/plugin-medium-zoom@1.2.1(rspress@1.2.1):
@@ -4951,14 +4871,14 @@ packages:
       rspress: ^1.0.2
     dependencies:
       medium-zoom: 1.0.8
-      rspress: 1.2.1(react-dom@18.2.0)(react@18.2.0)(ts-node@10.9.1)(typescript@5.2.2)(webpack@5.89.0)
+      rspress: 1.2.1(react-dom@18.2.0)(react@18.2.0)(typescript@5.2.2)(webpack@5.89.0)
     dev: false
 
-  /@rspress/shared@1.2.1(react-dom@18.2.0)(react@18.2.0)(ts-node@10.9.1)(typescript@5.2.2):
+  /@rspress/shared@1.2.1(react-dom@18.2.0)(react@18.2.0)(typescript@5.2.2):
     resolution: {integrity: sha512-WgoxkevGD38rBQOzmFp4f2ZxzcDknEk7jYcWHJFMtn9tRfooXWf+1o6SWOa2Y2mdHOAot9aZW1LLyM0a+t+PnA==}
     dependencies:
-      '@modern-js/builder': 2.38.0(react-dom@18.2.0)(react@18.2.0)(ts-node@10.9.1)(typescript@5.2.2)
-      '@modern-js/builder-rspack-provider': 2.38.0(react-dom@18.2.0)(react@18.2.0)(ts-node@10.9.1)(typescript@5.2.2)
+      '@modern-js/builder': 2.38.0(react-dom@18.2.0)(react@18.2.0)(typescript@5.2.2)
+      '@modern-js/builder-rspack-provider': 2.38.0(react-dom@18.2.0)(react@18.2.0)(typescript@5.2.2)
       chalk: 4.1.2
       rslog: 1.1.0
       unified: 10.1.2
@@ -5298,22 +5218,6 @@ packages:
     resolution: {integrity: sha512-L7z9BgrNEcYyUYtF+HaEfiS5ebkh9jXqbszz7pC0hRBPaatV0XjSD3+eHrpqFemQfgwiFF0QPIarnIihIDn7OA==}
     engines: {node: '>=10.13.0'}
     dev: false
-
-  /@tsconfig/node10@1.0.9:
-    resolution: {integrity: sha512-jNsYVVxU8v5g43Erja32laIDHXeoNvFEpX33OK4d6hljo3jDhCBDhx5dhCCTMWUojscpAagGiRkBKxpdl9fxqA==}
-    requiresBuild: true
-
-  /@tsconfig/node12@1.0.11:
-    resolution: {integrity: sha512-cqefuRsh12pWyGsIoBKJA9luFu3mRxCA+ORZvA4ktLSzIuCUtWVxGIuXigEwO5/ywWFMZ2QEGKWvkZG1zDMTag==}
-    requiresBuild: true
-
-  /@tsconfig/node14@1.0.3:
-    resolution: {integrity: sha512-ysT8mhdixWK6Hw3i1V2AeRqZ5WfXg1G43mqoYlM2nc6388Fq5jcXyr5mRsqViLx/GJYdoL0bfXD8nmF+Zn/Iow==}
-    requiresBuild: true
-
-  /@tsconfig/node16@1.0.4:
-    resolution: {integrity: sha512-vxhUy4J8lyeyinH7Azl1pdd43GJhZH/tP2weN8TntQblOY+A0XbT8DJk1/oCPuOOyg/Ja757rG0CgHcWC8OfMA==}
-    requiresBuild: true
 
   /@types/acorn@4.0.6:
     resolution: {integrity: sha512-veQTnWP+1D/xbxVrPC3zHnCZRjSrKfhbMUlEA43iMZLu7EsnTtkJklIuwrCPbOi8YkvDQAiW05VQQFvvz9oieQ==}
@@ -5791,6 +5695,7 @@ packages:
   /acorn-walk@8.2.0:
     resolution: {integrity: sha512-k+iyHEuPgSw6SbuDpGQM+06HQUa04DZ3o+F6CSzXMvvI5KMvnaEqXe+YVe555R9nn6GPt404fos4wcgpw12SDA==}
     engines: {node: '>=0.4.0'}
+    dev: false
 
   /acorn@7.4.1:
     resolution: {integrity: sha512-nQyp0o1/mNdbTO1PO6kHkwSrmgZ0MT/jCCpNiwbUjGoRN4dlBhqJtoQuCnEOKzgTVwg0ZWiCoQy6SxMebQVh8A==}
@@ -5922,10 +5827,6 @@ packages:
       normalize-path: 3.0.0
       picomatch: 2.3.1
     dev: false
-
-  /arg@4.1.3:
-    resolution: {integrity: sha512-58S9QDqG0Xx27YwPSt9fJxivjYl432YCwfDMfZ+71RAqUrZef7LrKQZ3LHLOwCS4FLNBplP533Zx895SeOCHvA==}
-    requiresBuild: true
 
   /arg@5.0.2:
     resolution: {integrity: sha512-PYjyFOLKQ9y57JvQ6QLo8dAgNqswh8M1RMJYdQduT6xbWSgK36P/Z/v+p888pM69jMMfS8Xd8F6I1kQ/I9HUGg==}
@@ -6541,13 +6442,13 @@ packages:
       repeat-string: 1.6.1
     dev: true
 
-  /commitizen@4.3.0:
+  /commitizen@4.3.0(typescript@5.2.2):
     resolution: {integrity: sha512-H0iNtClNEhT0fotHvGV3E9tDejDeS04sN1veIebsKYGMuGscFaswRoYJKmT3eW85eIJAs0F28bG2+a/9wCOfPw==}
     engines: {node: '>= 12'}
     hasBin: true
     dependencies:
       cachedir: 2.3.0
-      cz-conventional-changelog: 3.3.0
+      cz-conventional-changelog: 3.3.0(typescript@5.2.2)
       dedent: 0.7.0
       detect-indent: 6.1.0
       find-node-modules: 2.1.3
@@ -6561,8 +6462,7 @@ packages:
       strip-bom: 4.0.0
       strip-json-comments: 3.1.1
     transitivePeerDependencies:
-      - '@swc/core'
-      - '@swc/wasm'
+      - typescript
     dev: true
 
   /common-path-prefix@3.0.0:
@@ -6692,23 +6592,6 @@ packages:
     resolution: {integrity: sha512-ZQBvi1DcpJ4GDqanjucZ2Hj3wEO5pZDS89BWbkcrvdxksJorwUDDZamX9ldFkp9aw2lmBDLgkObEA4DWNJ9FYQ==}
     dev: true
 
-  /cosmiconfig-typescript-loader@4.4.0(@types/node@18.18.6)(cosmiconfig@8.0.0)(ts-node@10.9.1)(typescript@5.2.2):
-    resolution: {integrity: sha512-BabizFdC3wBHhbI4kJh0VkQP9GkBfoHPydD0COMce1nJ1kJAB3F2TmJ/I7diULBKtmEWSwEbuN/KDtgnmUUVmw==}
-    engines: {node: '>=v14.21.3'}
-    requiresBuild: true
-    peerDependencies:
-      '@types/node': '*'
-      cosmiconfig: '>=7'
-      ts-node: '>=10'
-      typescript: '>=4'
-    dependencies:
-      '@types/node': 18.18.6
-      cosmiconfig: 8.0.0
-      ts-node: 10.9.1(@types/node@20.8.9)(typescript@5.2.2)
-      typescript: 5.2.2
-    dev: true
-    optional: true
-
   /cosmiconfig-typescript-loader@5.0.0(@types/node@18.18.6)(cosmiconfig@8.3.6)(typescript@5.2.2):
     resolution: {integrity: sha512-+8cK7jRAReYkMwMiG+bxhcNKiHJDM6bR9FD/nGBXOWdMLuYawjF5cGrtLilJ+LGd3ZjCXnJjR5DkfWPoIVlqJA==}
     engines: {node: '>=v16'}
@@ -6758,10 +6641,6 @@ packages:
       parse-json: 5.2.0
       path-type: 4.0.0
       typescript: 5.2.2
-
-  /create-require@1.1.1:
-    resolution: {integrity: sha512-dcKFX3jn0MpIaXjisoRvexIJVEKzaq7z2rZKxf+MSr9TkdmHmsU4m2lcLojrj/FHl8mk5VxMmYA+ftRkP/3oKQ==}
-    requiresBuild: true
 
   /cross-spawn@5.1.0:
     resolution: {integrity: sha512-pTgQJ5KC0d2hcY8eyL1IzlBPYjTkyH72XRZPnLyKus2mBfNjQs3klqbJU2VILqZryAZUt9JOb3h/mWMy23/f5A==}
@@ -7084,21 +6963,20 @@ packages:
       stream-transform: 2.1.3
     dev: true
 
-  /cz-conventional-changelog@3.3.0:
+  /cz-conventional-changelog@3.3.0(typescript@5.2.2):
     resolution: {integrity: sha512-U466fIzU5U22eES5lTNiNbZ+d8dfcHcssH4o7QsdWaCcRs/feIPCxKYSWkYBNs5mny7MvEfwpTLWjvbm94hecw==}
     engines: {node: '>= 10'}
     dependencies:
       chalk: 2.4.2
-      commitizen: 4.3.0
+      commitizen: 4.3.0(typescript@5.2.2)
       conventional-commit-types: 3.0.0
       lodash.map: 4.6.0
       longest: 2.0.1
       word-wrap: 1.2.5
     optionalDependencies:
-      '@commitlint/load': 18.0.0
+      '@commitlint/load': 18.2.0(typescript@5.2.2)
     transitivePeerDependencies:
-      - '@swc/core'
-      - '@swc/wasm'
+      - typescript
     dev: true
 
   /cz-git@1.7.1:
@@ -7254,11 +7132,6 @@ packages:
   /didyoumean@1.2.2:
     resolution: {integrity: sha512-gxtyfqMg7GKyhQmb056K7M3xszy/myH8w+B4RT+QXBQsvAOdc3XymqDDPHx1BgPgsdAA5SIifona89YtRATDzw==}
     dev: false
-
-  /diff@4.0.2:
-    resolution: {integrity: sha512-58lmxKSA4BNyLz+HHMUzlOEpg09FV+ev6ZMe3vJihgdxzgcwZ8VoEEPmALCZG9LmqfVoNMMKpttIYTVG6uDY7A==}
-    engines: {node: '>=0.3.1'}
-    requiresBuild: true
 
   /diff@5.1.0:
     resolution: {integrity: sha512-D+mk+qE8VC/PAUrlAU34N+VfXev0ghe5ywmpqrawphmVZc1bEfn56uo9qpyGp1p4xpzOHkSW4ztBd6L7Xx4ACw==}
@@ -9476,10 +9349,6 @@ packages:
       semver: 5.7.2
     dev: false
 
-  /make-error@1.3.6:
-    resolution: {integrity: sha512-s8UhlNe7vPKomQhC1qFelMokr/Sc3AgNbso3n74mVPA5LTZwkB9NlXf4XPamLxJE8h0gh73rM94xvwRT2CVInw==}
-    requiresBuild: true
-
   /map-obj@1.0.1:
     resolution: {integrity: sha512-7N/q3lyZ+LVCp7PzuxrJr4KMbBE2hW7BT7YNia330OFxIf4d3r5zVpicP2650l7CPN6RM9zOJRl3NGpqSiw3Eg==}
     engines: {node: '>=0.10.0'}
@@ -10816,7 +10685,7 @@ packages:
       postcss: 8.4.21
     dev: false
 
-  /postcss-load-config@3.1.4(postcss@8.4.21)(ts-node@10.9.1):
+  /postcss-load-config@3.1.4(postcss@8.4.21):
     resolution: {integrity: sha512-6DiM4E7v4coTE4uzA8U//WhtPwyhiim3eyjEMFCnUpzbrkK9wJHgKDT2mR+HbtSrd/NubVaYTOpSpjUl8NQeRg==}
     engines: {node: '>= 10'}
     peerDependencies:
@@ -10830,7 +10699,6 @@ packages:
     dependencies:
       lilconfig: 2.1.0
       postcss: 8.4.21
-      ts-node: 10.9.1(@types/node@20.8.9)(typescript@5.2.2)
       yaml: 1.10.2
     dev: false
 
@@ -11654,13 +11522,13 @@ packages:
       fs-extra: 11.1.1
     dev: false
 
-  /rspress@1.2.1(react-dom@18.2.0)(react@18.2.0)(ts-node@10.9.1)(typescript@5.2.2)(webpack@5.89.0):
+  /rspress@1.2.1(react-dom@18.2.0)(react@18.2.0)(typescript@5.2.2)(webpack@5.89.0):
     resolution: {integrity: sha512-K+I12IzblxUUJw5cU3SQXi9EtAiCC1JpdGTw+QGsZ5lML1vcsBNeLrW4N3Rp51/wdZ79lM3uFh7D9bEtlyXiWA==}
     hasBin: true
     dependencies:
       '@modern-js/node-bundle-require': 2.38.0
-      '@rspress/core': 1.2.1(rspress@1.2.1)(ts-node@10.9.1)(typescript@5.2.2)(webpack@5.89.0)
-      '@rspress/shared': 1.2.1(react-dom@18.2.0)(react@18.2.0)(ts-node@10.9.1)(typescript@5.2.2)
+      '@rspress/core': 1.2.1(rspress@1.2.1)(typescript@5.2.2)(webpack@5.89.0)
+      '@rspress/shared': 1.2.1(react-dom@18.2.0)(react@18.2.0)(typescript@5.2.2)
       cac: 6.7.14
       chalk: 5.3.0
       chokidar: 3.5.3
@@ -12256,7 +12124,7 @@ packages:
     resolution: {integrity: sha512-9QNk5KwDF+Bvz+PyObkmSYjI5ksVUYtjW7AU22r2NKcfLJcXp96hkDWU3+XndOsUb+AQ9QhfzfCT2O+CNWT5Tw==}
     dev: false
 
-  /tailwindcss@3.2.7(postcss@8.4.21)(ts-node@10.9.1):
+  /tailwindcss@3.2.7(postcss@8.4.21):
     resolution: {integrity: sha512-B6DLqJzc21x7wntlH/GsZwEXTBttVSl1FtCzC8WP4oBc/NKef7kaax5jeihkkCEWc831/5NDJ9gRNDK6NEioQQ==}
     engines: {node: '>=12.13.0'}
     hasBin: true
@@ -12280,7 +12148,7 @@ packages:
       postcss: 8.4.21
       postcss-import: 14.1.0(postcss@8.4.21)
       postcss-js: 4.0.1(postcss@8.4.21)
-      postcss-load-config: 3.1.4(postcss@8.4.21)(ts-node@10.9.1)
+      postcss-load-config: 3.1.4(postcss@8.4.21)
       postcss-nested: 6.0.0(postcss@8.4.21)
       postcss-selector-parser: 6.0.13
       postcss-value-parser: 4.2.0
@@ -12429,37 +12297,6 @@ packages:
     dependencies:
       matchit: 1.1.0
     dev: false
-
-  /ts-node@10.9.1(@types/node@20.8.9)(typescript@5.2.2):
-    resolution: {integrity: sha512-NtVysVPkxxrwFGUUxGYhfux8k78pQB3JqYBXlLRZgdGUqTO5wU/UyHop5p70iEbGhB7q5KmiZiU0Y3KlJrScEw==}
-    hasBin: true
-    requiresBuild: true
-    peerDependencies:
-      '@swc/core': '>=1.2.50'
-      '@swc/wasm': '>=1.2.50'
-      '@types/node': '*'
-      typescript: '>=2.7'
-    peerDependenciesMeta:
-      '@swc/core':
-        optional: true
-      '@swc/wasm':
-        optional: true
-    dependencies:
-      '@cspotcode/source-map-support': 0.8.1
-      '@tsconfig/node10': 1.0.9
-      '@tsconfig/node12': 1.0.11
-      '@tsconfig/node14': 1.0.3
-      '@tsconfig/node16': 1.0.4
-      '@types/node': 20.8.9
-      acorn: 8.10.0
-      acorn-walk: 8.2.0
-      arg: 4.1.3
-      create-require: 1.1.1
-      diff: 4.0.2
-      make-error: 1.3.6
-      typescript: 5.2.2
-      v8-compile-cache-lib: 3.0.1
-      yn: 3.1.1
 
   /tslib@2.6.2:
     resolution: {integrity: sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==}
@@ -12833,10 +12670,6 @@ packages:
       kleur: 4.1.5
       sade: 1.8.1
     dev: false
-
-  /v8-compile-cache-lib@3.0.1:
-    resolution: {integrity: sha512-wa7YjyUGfNZngI/vtK0UHAN+lgDCxBPCylVXGp0zu59Fz5aiGtNXaq3DhIov063MorB+VfufLh3JlF2KdTK3xg==}
-    requiresBuild: true
 
   /validate-npm-package-license@3.0.4:
     resolution: {integrity: sha512-DpKm2Ui/xN7/HQKCtpZxoRWBhZ9Z0kqtygG8XCgNQ8ZlDnxuQmWhj566j8fN4Cu3/JmbhsDo7fcAJq4s9h27Ew==}
@@ -13246,11 +13079,6 @@ packages:
       y18n: 5.0.8
       yargs-parser: 21.1.1
     dev: true
-
-  /yn@3.1.1:
-    resolution: {integrity: sha512-Ux4ygGWsu2c7isFWe8Yu1YluJmqVhxqK2cLXNQA5AcC3QfbGNpM7fu0Y8b/z16pXLnFxZYvWhd3fhBY9DLmC6Q==}
-    engines: {node: '>=6'}
-    requiresBuild: true
 
   /yocto-queue@0.1.0:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
