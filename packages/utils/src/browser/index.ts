@@ -4,6 +4,8 @@ export class BrowserUtils {
   /**
    * 打开新窗口
    * @param url 目标地址 URL
+   * @example
+   * BrowserUtils.openNewWindow("https://github.com/recallwei")
    */
   static openNewWindow(url: string) {
     const w: Window | null = window.open('about:blank')
@@ -16,6 +18,16 @@ export class BrowserUtils {
   /**
    * 复制到剪切板
    * @param text 需要复制的文本
+   * @example
+   * ```ts
+   * const copy = async (text: string) => {
+   *   try {
+   *     await BrowserUtils.getClipBoardText(text)
+   *   } catch {
+   *   //
+   *   }
+   * }
+   * ```
    */
   static setClipBoardText(text: string): Promise<void> {
     return navigator.clipboard.writeText(text)
@@ -23,29 +35,55 @@ export class BrowserUtils {
 
   /**
    * 下载文件
-   * @param imgURL 图片地址
+   * @param url 文件地址
    * @param fileName 下载后的文件名
+   * @example
+   * ```ts
+   * BrowserUtils.downloadFile("FILE_URL", "FILE_NAME")
+   * ```
    */
-  static downloadFile(imgURL: string, fileName: string) {
+  static downloadFile(url: string, fileName: string) {
     const aElement = document.createElement('a')
-    aElement.href = imgURL
+    aElement.href = url
     aElement.setAttribute('download', fileName)
     aElement.click()
   }
 
   /**
-   * 判定是否是移动端
-   * @description 响应式请使用 useMediaQuery
+   * 根据站点元数据动态加载 favicon
+   * @description 默认使用 /favicon.ico
+   * @example
+   * ```ts
+   * BrowserUtils.loadFavicon()
+   * ```
    */
-  static isMobile(): boolean {
-    return window.matchMedia('only screen and (max-width: 640px)').matches
+  static loadFavicon(url?: string): BrowserUtils {
+    const faviconUrl = url ?? '/favicon.ico'
+
+    let faviconElement = document.querySelector(
+      'link[rel="icon"]'
+    ) as HTMLLinkElement
+
+    if (faviconElement !== null) {
+      faviconElement.href = faviconUrl
+    } else {
+      faviconElement = document.createElement('link')
+      faviconElement.rel = 'icon'
+      faviconElement.href = faviconUrl
+      document.head.appendChild(faviconElement)
+    }
+    return this
   }
 
   /**
    * 禁止手势缩放
    * @description 该方法用于禁止移动端手势缩放，以提高更好的用户体验。适配 Web 手机端页面，在页面初始化的时候调用即可。
+   * @example
+   * ```ts
+   * BrowserUtils.disableGestureScale()
+   * ```
    */
-  static disableGestureScale() {
+  static disableGestureScale(): BrowserUtils {
     document.addEventListener(
       'gesturestart',
       (event) => {
@@ -68,6 +106,35 @@ export class BrowserUtils {
     document.addEventListener('gesturestart', (event) => {
       event.preventDefault()
     })
+    return this
+  }
+
+  /**
+   * 解决 Naive UI 样式冲突问题
+   * @description 注意：需要在挂载 Vue App 之前调用
+   * @example
+   * ```ts
+   * BrowserUtils.resolveNaiveStyle()
+   * @see
+   * - [Naive UI - 样式冲突](https://www.naiveui.com/en-US/os-theme/docs/style-conflict)
+   */
+  static resolveNaiveStyle(): BrowserUtils {
+    const meta = document.createElement('meta')
+    meta.name = 'naive-ui-style'
+    document.head.appendChild(meta)
+    return this
+  }
+
+  /**
+   * 判定是否是移动端
+   * @description 响应式请使用 useMediaQuery
+   * @example
+   * ```ts
+   * const isMobile = BrowserUtils.isMobile()
+   * ```
+   */
+  static isMobile(): boolean {
+    return window.matchMedia('only screen and (max-width: 640px)').matches
   }
 
   /**
@@ -75,6 +142,16 @@ export class BrowserUtils {
    * @description 借助 requestAnimationFrame 实现平滑滚动
    * @param scrollOptions 滚动配置项
    * @returns requestAnimationFrame 的 id
+   * @example
+   * ```ts
+   * let animationFrameId: number | null = null
+   * animationFrameId = BrowserUtils.smoothScroll({
+   *   element: document.body,
+   *   target: 0,
+   *   duration: 200,
+   *   animationFrameId
+   * })
+   * ```
    */
   static smoothScroll(scrollOptions: ScrollOptions): number | null {
     const startTime = performance.now()
