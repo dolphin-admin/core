@@ -1,4 +1,4 @@
-# 响应类型
+# Response Type
 
 ## BaseResponseVo
 
