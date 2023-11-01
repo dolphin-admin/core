@@ -7,7 +7,7 @@ export default defineConfig({
   globalStyles: path.join(__dirname, 'styles/index.css'),
   icon: '/dolphin-admin.png',
   logo: '/dolphin-admin.png',
-  lang: 'en',
+  lang: 'zh',
   builderConfig: {
     dev: {
       port: 4065
@@ -70,6 +70,20 @@ export default defineConfig({
   },
   markdown: {
     // checkDeadLinks: true,
-    showLineNumbers: true
+    showLineNumbers: true,
+    highlightLanguages: [
+      'js',
+      'jsx',
+      'ts',
+      'tsx',
+      'json',
+      'css',
+      'scss',
+      'bash',
+      'md',
+      'mdx',
+      'toml',
+      'diff'
+    ]
   }
 })
