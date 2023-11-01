@@ -8,7 +8,7 @@ hero:
   actions:
     - theme: brand
       text: 开始
-      link: /guide/getting-started/introduction
+      link: /zh/guide/getting-started/introduction
     - theme: alt
       text: Github
       link: https://github.com/bit-ocean-studio/dolphin-admin-core

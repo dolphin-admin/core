@@ -1,1 +1,5 @@
-[{ "type": "dir", "name": "common", "label": "通用功能" }]
+[
+  "tech-stack",
+  { "type": "dir", "name": "common", "label": "通用功能" },
+  "deploy"
+]
