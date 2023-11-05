@@ -52,7 +52,7 @@ function add(a: number, b: number): number {
 
 ### Vue Setup 内引入
 
-```ts
+```typescript
 import type { MessageSchema } from '@/types'
 
 const { t } = useI18n<{ message: MessageSchema }>({ useScope: 'global' })
@@ -66,7 +66,7 @@ t('App.Name')
 
 ### Vue Setup 外引入
 
-```ts
+```typescript
 import { i18n } from '@/i18n'
 
 const { t } = i18n.global
@@ -106,7 +106,7 @@ t('App.Name')
 
 统一使用异步方法验证：
 
-```ts
+```typescript
 const handleSubmit = async () => {
   try {
     await formRef.value!.validate()

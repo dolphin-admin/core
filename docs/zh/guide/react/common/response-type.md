@@ -2,7 +2,7 @@
 
 ## BaseResponseVo
 
-```ts
+```typescript
 export interface BaseResponseVo<T = any> {
   code?: string
   message?: string
