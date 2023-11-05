@@ -1,18 +1,19 @@
 {
-  "name": "@dolphin-admin/auto-import",
-  "version": "0.0.8",
-  "description": "Auto import preset for Dolphin Admin.",
+  "name": "@dolphin-admin/bootstrap-animation",
+  "version": "0.0.2",
+  "description": "Bootstrap animation for Dolphin Admin.",
   "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
   "repository": {
     "type": "git",
     "url": "https://github.com/bit-ocean-studio/dolphin-admin-core.git",
-    "directory": "plugins/auto-import"
+    "directory": "plugins/bootstrap-animation"
   },
   "homepage": "https://github.com/bit-ocean-studio/dolphin-admin-core#readme",
   "bugs": "https://github.com/bit-ocean-studio/dolphin-admin-core/issues",
   "keywords": [
     "dolphin-admin",
-    "auto-import"
+    "bootstrap-animation",
+    "vite-plugin"
   ],
   "files": [
     "dist"
@@ -33,10 +34,18 @@
     "typecheck": "tsc --noEmit",
     "prepublishOnly": "pnpm run build"
   },
+  "peerDependencies": {
+    "vite": "^4.5.0"
+  },
   "dependencies": {
-    "dayjs": "^1.11.10",
-    "unimport": "^3.4.0",
-    "unplugin-auto-import": "^0.16.7"
+    "figlet": "^1.7.0",
+    "gradient-string": "^2.0.2"
+  },
+  "devDependencies": {
+    "@types/figlet": "^1.5.7",
+    "@types/gradient-string": "^1.1.4",
+    "@types/node": "^20.8.10",
+    "vite": "^4.5.0"
   },
   "license": "MIT"
 }

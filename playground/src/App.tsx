@@ -31,16 +31,12 @@ function App() {
       <h1>Vite + React</h1>
       <div className="card">
         <button
-          onClick={() =>
-            BrowserUtils.openNewWindow('https://dolphin-admin.bit-ocean.studio')
-          }
+          onClick={() => BrowserUtils.openNewWindow('https://dolphin-admin.bit-ocean.studio')}
         >
           Click me!
         </button>
       </div>
-      <p className="read-the-docs">
-        This is a playground for Dolphin Admin Core.
-      </p>
+      <p className="read-the-docs">This is a playground for Dolphin Admin Core.</p>
       {TimeUtils.formatTime(Date.now(), 'YYYY/MM/DD HH:mm:ss')}
     </>
   )
