@@ -1,6 +1,6 @@
 {
   "name": "@dolphin-admin/auto-import",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Auto import preset for Dolphin Admin.",
   "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
   "repository": {

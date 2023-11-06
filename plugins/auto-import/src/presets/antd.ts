@@ -18,12 +18,17 @@ const AntdComponents = [
   'Breadcrumb',
   'Menu',
   'Select',
-  'Space'
+  'Space',
+  'Popover',
+  'Dropdown',
+  'Avatar',
+  'Tooltip'
 ]
 
 const InnerAntdComponents: (PresetImport | InlinePreset)[] = [
   ['theme', 'AntdTheme'],
-  ['App', 'AntdApp']
+  ['App', 'AntdApp'],
+  ['message', 'AMessage']
 ]
 
 const buildAntdImports = (prefix?: string): PresetImport[] => {
