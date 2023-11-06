@@ -1,5 +1,11 @@
 # @dolphin-admin/utils
 
+## 0.0.13
+
+### Patch Changes
+
+- fix theme utils not export
+
 ## 0.0.12
 
 ### Patch Changes
