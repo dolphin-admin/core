@@ -1,4 +1,5 @@
 export * from './auth'
 export * from './browser'
+export * from './lang'
 export * from './time'
 export * from './types'

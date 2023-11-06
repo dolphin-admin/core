@@ -1,5 +1,11 @@
 # @dolphin-admin/utils
 
+## 0.0.12
+
+### Patch Changes
+
+- fix lang utils not export
+
 ## 0.0.11
 
 ### Patch Changes
