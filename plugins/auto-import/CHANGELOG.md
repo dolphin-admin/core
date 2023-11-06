@@ -1,5 +1,11 @@
 # @dolphin-admin/auto-import
 
+## 0.0.9
+
+### Patch Changes
+
+- add auth and lang utils
+
 ## 0.0.8
 
 ### Patch Changes

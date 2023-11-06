@@ -13,6 +13,8 @@
     "release:version": "pnpm changeset version",
     "release:publish": "pnpm build && pnpm changeset publish",
     "cspell:check": "cspell \"**\"",
+    "eslint:check": "eslint \"**/*.{ts,tsx}\" --color",
+    "eslint:fix": "pnpm eslint:check --fix",
     "prettier:check": "prettier --check --ignore-unknown .",
     "prettier:fix": "prettier --write --ignore-unknown .",
     "cz": "git-cz",
@@ -20,9 +22,10 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "rspress": "^1.5.0"
+    "rspress": "^1.5.1"
   },
   "devDependencies": {
+    "@brucesong/eslint-config-ts": "^1.0.13",
     "@changesets/cli": "^2.26.2",
     "@commitlint/cli": "^18.2.0",
     "@commitlint/config-conventional": "^18.1.0",
@@ -30,6 +33,7 @@
     "commitizen": "^4.3.0",
     "cspell": "^7.3.8",
     "cz-git": "^1.7.1",
+    "eslint": "^8.53.0",
     "husky": "^8.0.3",
     "lint-staged": "^15.0.2",
     "prettier": "^3.0.3",

@@ -1,8 +1,10 @@
+import { stdout } from 'node:process'
+
 import figlet from 'figlet'
 import gradient from 'gradient-string'
-import { stdout } from 'node:process'
-import { metadata, i18n } from './config'
-import { PluginConfig } from './types'
+
+import { i18n, metadata } from './config'
+import type { PluginConfig } from './types'
 
 export const bootstrapLog = (pluginConfig?: PluginConfig) => {
   const { name, description, author, version, customContent, lang = 'en-US' } = pluginConfig ?? {}

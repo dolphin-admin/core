@@ -1,2 +1,2 @@
-export * from './vite-plugin'
 export * from './utils'
+export * from './vite-plugin'

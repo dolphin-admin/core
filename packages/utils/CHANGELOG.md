@@ -1,5 +1,11 @@
 # @dolphin-admin/utils
 
+## 0.0.11
+
+### Patch Changes
+
+- add auth and lang utils
+
 ## 0.0.10
 
 ### Patch Changes

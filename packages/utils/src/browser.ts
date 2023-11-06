@@ -60,9 +60,7 @@ export class BrowserUtils {
   static loadFavicon(url?: string) {
     const faviconUrl = url ?? '/favicon.ico'
 
-    let faviconElement = document.querySelector(
-      'link[rel="icon"]'
-    ) as HTMLLinkElement
+    let faviconElement = document.querySelector('link[rel="icon"]') as HTMLLinkElement
 
     if (faviconElement !== null) {
       faviconElement.href = faviconUrl
