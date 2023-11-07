@@ -1,5 +1,11 @@
 # @dolphin-admin/utils
 
+## 0.0.16
+
+### Patch Changes
+
+- fix bad release
+
 ## 0.0.15
 
 ### Patch Changes
