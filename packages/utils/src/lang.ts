@@ -1,33 +1,42 @@
 import { Lang } from './types'
 
+/**
+ * 语言工具类
+ * @summary 用于处理国际化相关的逻辑
+ * @author Bruce Song <recall4056@gmail.com>
+ * @license MIT
+ */
 export class LangUtils {
   /**
    * 语言存储键名
+   * @description 用于存储语言到 `localStorage` 中的键名
+   * @default "lang"
    */
   private static LANG_KEY = 'lang'
 
   /**
    * 获取语言
    * @description 获取 `localStorage` 中存储的语言
+   * @returns `localStorage` 中存储的语言
    * @example
    * ```ts
-   * LangUtils.getLang()
+   * const lang = LangUtils.getLang()
    * ```
    */
-  static getLang() {
+  static getLang(): string | null {
     return localStorage.getItem(this.LANG_KEY)
   }
 
   /**
    * 设置语言
    * @description 设置 `localStorage` 中存储的语言
-   * @param lang 语言
+   * @param lang - 语言
    * @example
    * ```ts
-   * LangUtils.setLang(Lang['zh-CN'])
+   * LangUtils.setLang("zh-CN")
    * ```
    */
-  static setLang(lang: Lang) {
+  static setLang(lang: string) {
     localStorage.setItem(this.LANG_KEY, lang)
   }
 
@@ -48,16 +57,21 @@ export class LangUtils {
    * @description
    * - 包含 `zh`，返回中文 `zh-CN`
    * - 包含 `en`，返回英文 `en-US`
-   * - 其他情况返回空字符串
+   * - 注意：其他情况返回空字符串
+   * @returns 浏览器语言
    * @example
    * ```ts
-   * LangUtils.getBrowserLang()
+   * const lang = LangUtils.getBrowserLang()
    * ```
    */
-  static getBrowserLang() {
+  static getBrowserLang(): string {
     const lang = window.navigator.language
-    if (lang.includes('zh')) return Lang['zh-CN']
-    if (lang.includes('en')) return Lang['en-US']
+    if (lang.includes('zh')) {
+      return Lang['zh-CN']
+    }
+    if (lang.includes('en')) {
+      return Lang['en-US']
+    }
     return ''
   }
 
@@ -67,15 +81,13 @@ export class LangUtils {
    * 1. 优先使用 `localStorage` 中的 `lang`
    * 2. 其次使用浏览器语言
    * 3. 都没有就默认中文
+   * @returns 默认语言
    * @example
    * ```ts
-   * LangUtils.getDefaultLang()
+   * const lang = LangUtils.getDefaultLang()
    * ```
    */
-  static getDefaultLang() {
-    const lang = this.getLang()
-    const browserLang = this.getBrowserLang()
-
-    return lang ?? browserLang ?? Lang['zh-CN']
+  static getDefaultLang(): string {
+    return this.getLang() ?? this.getBrowserLang() ?? Lang['zh-CN']
   }
 }

@@ -1,53 +1,68 @@
+/**
+ * 认证工具类
+ * @summary 用于处理登录认证相关的逻辑
+ * @author Bruce Song <recall4056@gmail.com>
+ * @license MIT
+ */
 export class AuthUtils {
   /**
    * 访问令牌存储键名
+   * @default "access_token"
    */
   private static ACCESS_TOKEN_KEY = 'access_token'
 
   /**
    * 记住密码相关信息存储键名
+   * @default "login_account_data"
    */
   static REMEMBERED_ACCOUNT_KEY = 'login_account_data'
 
   /**
    * 默认管理员用户名
    * @description 用于内置管理员角色登录的用户名
+   * @default "admin"
    */
   static DEFAULT_ADMIN_USERNAME = 'admin'
 
   /**
    * 默认管理员密码
    * @description 用于内置管理员角色登录的密码
+   * @default "123456"
    */
   static DEFAULT_ADMIN_PASSWORD = '123456'
 
   /**
    * 默认访客用户名
    * @description 用于内置访客角色登录的用户名
+   * @default "visitor"
    */
   static DEFAULT_VISITOR_USERNAME = 'visitor'
 
   /**
    * 默认访客密码
    * @description 用于内置访客角色登录的密码
+   * @default "123456"
    */
   static DEFAULT_VISITOR_PASSWORD = '123456'
 
   /**
    * 获取访问令牌
    * @description 获取 `localStorage` 中存储的访问令牌
+   * @returns `localStorage` 中存储的访问令牌
    * @example
    * ```ts
    * AuthUtils.getToken()
    * ```
    */
-  static getToken() {
+  static getToken(): string {
     return localStorage.getItem(this.ACCESS_TOKEN_KEY) ?? ''
   }
 
   /**
    * 获取 authorization
    * @description 拼接访问令牌，格式如：`Bearer` + `accessToken`
+   * @param prefix - 前缀，默认为 `Bearer`
+   * @returns 访问令牌
    * @example
    * ```ts
    * AuthUtils.getAuthorization() // 默认是 Bearer 开头
@@ -61,7 +76,7 @@ export class AuthUtils {
   /**
    * 设置访问令牌
    * @description 设置 `localStorage` 中存储的访问令牌
-   * @param token 访问令牌
+   * @param token - 访问令牌
    * @example
    * ```ts
    * AuthUtils.setToken("xxx")
@@ -86,6 +101,7 @@ export class AuthUtils {
   /**
    * 判断当前是否已经登录
    * @description 根据是否存在访问令牌，判断当前是否处于登录状态
+   * @returns 是否已经登录
    * @example
    * ```ts
    * AuthUtils.isAuthenticated()
@@ -98,6 +114,7 @@ export class AuthUtils {
   /**
    * 获取记住密码的账号密码
    * @description 用于登录页记住密码功能
+   * @returns 记住密码的账号密码
    * @example
    * ```ts
    * JSON.parse(AuthUtils.getRememberedAccount() ?? '')
@@ -110,6 +127,7 @@ export class AuthUtils {
   /**
    * 设置记住密码的账号密码
    * @description 设置 `localStorage` 中存储的与记住密码相关的信息
+   * @param data - 序列化后的记住密码的信息
    * @example
    * ```ts
    * AuthUtils.setRememberedAccount(JSON.stringify({

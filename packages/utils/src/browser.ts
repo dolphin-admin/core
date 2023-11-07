@@ -1,5 +1,11 @@
 import type { ScrollOptions } from './types'
 
+/**
+ * 浏览器工具类
+ * @summary 浏览器环境中的工具方法
+ * @author Bruce Song <recall4056@gmail.com>
+ * @license MIT
+ */
 export class BrowserUtils {
   /**
    * 打开新窗口
@@ -111,8 +117,7 @@ export class BrowserUtils {
    * @example
    * ```ts
    * BrowserUtils.resolveNaiveStyle()
-   * @see
-   * - [Naive UI - 样式冲突](https://www.naiveui.com/en-US/os-theme/docs/style-conflict)
+   * @see {@link [Naive UI - 样式冲突](https://www.naiveui.com/en-US/os-theme/docs/style-conflict)}
    */
   static resolveNaiveStyle() {
     const meta = document.createElement('meta')
@@ -123,6 +128,7 @@ export class BrowserUtils {
   /**
    * 判定是否是移动端
    * @description 响应式请使用 useMediaQuery
+   * @returns 是否是移动端
    * @example
    * ```ts
    * const isMobile = BrowserUtils.isMobile()

@@ -2,20 +2,31 @@ import dayjs from 'dayjs'
 
 import type { TimeFormatter } from './types'
 
+/**
+ * 时间工具类
+ * @summary 用于处理日期、时间
+ * @author Bruce Song <recall4056@gmail.com>
+ * @license MIT
+ */
 export class TimeUtils {
   /**
+   * dayjs
+   * @description dayjs 的方法
+   */
+  static dayjs = dayjs
+
+  /**
    * 格式化时间
+   * @description 格式化时间
    * @param time 时间
-   * @param format 格式
+   * @param format 格式化的格式，默认为 `YYYY-MM-DD HH:mm:ss`
+   * @returns 格式化后的时间
    * @example
    * ```ts
    * TimeUtils.formatTime(new Date(), 'YYYY-MM-DD HH:mm:ss')
    * ```
    */
-  static formatTime(
-    time: string | number | Date,
-    format: TimeFormatter = 'YYYY-MM-DD HH:mm:ss'
-  ) {
+  static formatTime(time: string | number | Date, format: TimeFormatter = 'YYYY-MM-DD HH:mm:ss') {
     return dayjs(time).format(format)
   }
 
@@ -34,10 +45,8 @@ export class TimeUtils {
    */
   static getDuration(start?: string | Date, end?: string | Date): number {
     if (!start || !end) return 0
-    const startTimestamp =
-      typeof start === 'string' ? new Date(start).getTime() : start.getTime()
-    const endTimestamp =
-      typeof start === 'string' ? new Date(end).getTime() : start.getTime()
+    const startTimestamp = typeof start === 'string' ? new Date(start).getTime() : start.getTime()
+    const endTimestamp = typeof start === 'string' ? new Date(end).getTime() : start.getTime()
     return endTimestamp - startTimestamp
   }
 }

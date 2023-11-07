@@ -1,6 +1,6 @@
 {
   "name": "@dolphin-admin/utils",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "Universal utils for Dolphin Admin.",
   "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
   "repository": {

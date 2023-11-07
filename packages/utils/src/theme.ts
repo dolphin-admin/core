@@ -1,17 +1,26 @@
-import type { Theme } from './types'
+import { Theme } from './types'
 
+/**
+ * 主题工具类
+ * @summary 支持暗黑模式
+ * @author Bruce Song <recall4056@gmail.com>
+ * @license MIT
+ */
 export class ThemeUtils {
   /**
    * 主题存储键名
+   * @description 用于存储主题到 `localStorage` 中的键名
+   * @default "theme"
    */
   private static THEME_KEY = 'theme'
 
   /**
    * 获取主题
-   * @description 从 `localStorage` 中读取主题
+   * @description 获取 `localStorage` 中存储的主题
+   * @returns `localStorage` 中存储的主题
    * @example
    * ```ts
-   * ThemeUtils.getTheme()
+   * const theme = ThemeUtils.getTheme()
    * ```
    */
   static getTheme(): string | null {
@@ -20,21 +29,21 @@ export class ThemeUtils {
 
   /**
    * 设置主题
-   * @param theme
-   * @description 将主题存储到 `localStorage` 中
+   * @description 设置 `localStorage` 中存储的主题
+   * @param theme - 主题
    * @example
    * ```ts
-   * ThemeUtils.setTheme('light')
-   * ThemeUtils.setTheme('dark')
+   * ThemeUtils.setTheme(Theme.LIGHT)
+   * ThemeUtils.setTheme(Theme.DARK)
    * ```
    */
-  static setTheme(theme: Theme) {
+  static setTheme(theme: string) {
     localStorage.setItem(this.THEME_KEY, theme)
   }
 
   /**
    * 清除主题
-   * @description 从 `localStorage` 中移除主题
+   * @description 清除 `localStorage` 中存储的主题
    * @example
    * ```ts
    * ThemeUtils.clearTheme()
@@ -47,19 +56,20 @@ export class ThemeUtils {
   /**
    * 获取默认主题
    * @description 从 `localStorage` 中读取主题，如果没有读取到，则根据系统主题设置返回默认主题
+   * @returns 默认主题
    * @example
    * ```ts
-   * ThemeUtils.getDefaultTheme()
+   * const theme = ThemeUtils.getDefaultTheme()
    * ```
    */
   static getDefaultTheme(): Theme {
     if (
-      this.getTheme() === 'dark' ||
+      this.getTheme() === Theme.DARK ||
       (!this.getTheme() && window.matchMedia('(prefers-color-scheme: dark)').matches)
     ) {
-      return 'dark'
+      return Theme.DARK
     }
-    return 'light'
+    return Theme.LIGHT
   }
 
   /**
@@ -67,21 +77,22 @@ export class ThemeUtils {
    * @description
    * - 切换主题模式时，会自动添加或移除 document 上 `dark` 类名
    * - 将主题模式存储到 `localStorage` 中，以便下次打开页面时读取
+   * @param theme  - 主题
    * @example
    * ```ts
-   * ThemeUtils.changeTheme('light')
-   * ThemeUtils.changeTheme('dark')
+   * ThemeUtils.changeTheme(Theme.DARK)
+   * ThemeUtils.changeTheme(Theme.LIGHT)
    * ```
    */
   static changeTheme(theme: Theme) {
-    if (theme === 'dark') {
-      document.documentElement.classList.add('dark')
-      document.documentElement.setAttribute('data-theme', 'dark')
-      ThemeUtils.setTheme('dark')
-    } else {
-      document.documentElement.classList.remove('dark')
-      document.documentElement.setAttribute('data-theme', 'light')
-      ThemeUtils.setTheme('light')
+    if (theme === Theme.DARK || theme === Theme.LIGHT) {
+      document.documentElement.setAttribute('data-theme', theme)
+      ThemeUtils.setTheme(theme)
+    }
+    if (theme === Theme.DARK) {
+      document.documentElement.classList.add(Theme.DARK)
+    } else if (theme === Theme.LIGHT) {
+      document.documentElement.classList.remove(Theme.DARK)
     }
   }
 }

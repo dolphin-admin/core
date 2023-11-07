@@ -1,5 +1,11 @@
 # @dolphin-admin/utils
 
+## 0.0.14
+
+### Patch Changes
+
+- update utils
+
 ## 0.0.13
 
 ### Patch Changes
