@@ -90,4 +90,16 @@ export class LangUtils {
   static getDefaultLang(): string {
     return this.getLang() ?? this.getBrowserLang() ?? Lang['zh-CN']
   }
+
+  /**
+   * 设置 HTML 标签语言
+   * @param lang - 语言
+   * @example
+   * ```ts
+   * LangUtils.setHtmlLang("zh-CN")
+   * ```
+   */
+  static setHtmlLang(lang: string) {
+    document.querySelector('html')?.setAttribute('lang', lang)
+  }
 }

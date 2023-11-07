@@ -1,5 +1,11 @@
 # @dolphin-admin/utils
 
+## 0.0.15
+
+### Patch Changes
+
+- LangUtils add setHtmlLang method
+
 ## 0.0.14
 
 ### Patch Changes
