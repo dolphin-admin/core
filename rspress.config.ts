@@ -27,8 +27,7 @@ export default defineConfig({
         prevPageText: 'Previous',
         nextPageText: 'Next',
         editLink: {
-          docRepoBaseUrl:
-            'https://github.com/bit-ocean-studio/dolphin-admin-core/tree/main/docs',
+          docRepoBaseUrl: 'https://github.com/bit-ocean-studio/dolphin-admin-core/tree/main/docs',
           text: '📝 Edit this page on GitHub'
         }
       },
@@ -36,16 +35,14 @@ export default defineConfig({
         lang: 'zh',
         label: '简体中文',
         title: 'Dolphin Admin',
-        description:
-          '基于最佳实践、最新技术栈的轻量级开源后台管理系统，开箱即用。',
+        description: '基于最佳实践、最新技术栈的轻量级开源后台管理系统，开箱即用。',
         outlineTitle: '目录',
         lastUpdated: true,
         lastUpdatedText: '上次更新',
         prevPageText: '上一篇',
         nextPageText: '下一篇',
         editLink: {
-          docRepoBaseUrl:
-            'https://github.com/bit-ocean-studio/dolphin-admin-core/tree/main/docs',
+          docRepoBaseUrl: 'https://github.com/bit-ocean-studio/dolphin-admin-core/tree/main/docs',
           text: '📝 在 GitHub 上编辑此页'
         }
       }
