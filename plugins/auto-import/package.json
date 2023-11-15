@@ -35,7 +35,7 @@
   },
   "dependencies": {
     "dayjs": "^1.11.10",
-    "unimport": "^3.4.0",
+    "unimport": "^3.5.0",
     "unplugin-auto-import": "^0.16.7"
   },
   "license": "MIT"
