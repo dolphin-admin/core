@@ -7,7 +7,7 @@ export default defineConfig({
   globalStyles: path.join(__dirname, 'styles/index.css'),
   icon: '/dolphin-admin.png',
   logo: '/dolphin-admin.png',
-  lang: 'zh',
+  lang: 'en',
   builderConfig: {
     dev: {
       port: 4065
