@@ -1,5 +1,11 @@
 # @dolphin-admin/auto-import
 
+## 0.0.11
+
+### Patch Changes
+
+- migrate to vite v5
+
 ## 0.0.10
 
 ### Patch Changes

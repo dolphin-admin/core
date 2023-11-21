@@ -2,4 +2,3 @@ packages:
   - docs
   - playground
   - packages/*
-  - plugins/*

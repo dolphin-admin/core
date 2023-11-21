@@ -1,5 +1,11 @@
 # @dolphin-admin/bootstrap-animation
 
+## 0.0.5
+
+### Patch Changes
+
+- migrate to vite v5
+
 ## 0.0.4
 
 ### Patch Changes

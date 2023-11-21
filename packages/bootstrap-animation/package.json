@@ -1,12 +1,12 @@
 {
   "name": "@dolphin-admin/bootstrap-animation",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Bootstrap animation for Dolphin Admin.",
   "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
   "repository": {
     "type": "git",
     "url": "https://github.com/bit-ocean-studio/dolphin-admin-core.git",
-    "directory": "plugins/bootstrap-animation"
+    "directory": "packages/bootstrap-animation"
   },
   "homepage": "https://github.com/bit-ocean-studio/dolphin-admin-core#readme",
   "bugs": "https://github.com/bit-ocean-studio/dolphin-admin-core/issues",
@@ -35,7 +35,7 @@
     "prepublishOnly": "pnpm run build"
   },
   "peerDependencies": {
-    "vite": "^4.5.0"
+    "vite": "^5.0.0"
   },
   "dependencies": {
     "figlet": "^1.7.0",
@@ -44,8 +44,8 @@
   "devDependencies": {
     "@types/figlet": "^1.5.8",
     "@types/gradient-string": "^1.1.5",
-    "@types/node": "^20.9.0",
-    "vite": "^4.5.0"
+    "@types/node": "^20.9.2",
+    "vite": "^5.0.0"
   },
   "license": "MIT"
 }
