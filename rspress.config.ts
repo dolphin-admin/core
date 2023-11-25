@@ -8,11 +8,6 @@ export default defineConfig({
   icon: '/dolphin-admin.png',
   logo: '/dolphin-admin.png',
   lang: 'en',
-  builderConfig: {
-    dev: {
-      port: 4065
-    }
-  },
   themeConfig: {
     locales: [
       {
@@ -35,7 +30,7 @@ export default defineConfig({
         lang: 'zh',
         label: '简体中文',
         title: 'Dolphin Admin',
-        description: '基于最佳实践、最新技术栈的轻量级开源后台管理系统，开箱即用。',
+        description: '基于最新技术栈、最佳实践的轻量级开源后台管理系统，开箱即用。',
         outlineTitle: '目录',
         lastUpdated: true,
         lastUpdatedText: '上次更新',

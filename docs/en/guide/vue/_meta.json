@@ -1,6 +1,0 @@
-[
-  "tech-stack",
-  "dev-standard",
-  { "type": "dir", "name": "common", "label": "Common" },
-  "deploy"
-]

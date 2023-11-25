@@ -1,0 +1,47 @@
+#logo {
+  transform: scale(1.5);
+}
+
+.rspress-home-hero-text {
+  font-size: 2rem;
+}
+
+.rspress-home-feature-card {
+  padding: 16px;
+}
+
+.rspress-home-feature-detail {
+  text-align: center;
+}
+
+.nav-menu-group-content > * {
+  padding: 4px;
+}
+
+.nav-menu-group-content * {
+  margin: 0px;
+}
+
+.rspress-home-feature-card,
+.nav-menu-group-content > *,
+.nav-menu-group-content *,
+[class^='navSearchButton'],
+[class^='modal'],
+[class^='inputForm'],
+[class^='suggestItemContainer'],
+[class^='singleItem'],
+[class^='menuItem'],
+[class^='rspress-scrollbar'] *,
+[class^='rspress-doc-footer'] *,
+[class^='aside-container'] * {
+  border-radius: 6px !important;
+}
+
+.rspress-doc div[class*='language-'] {
+  border-radius: 6px !important;
+}
+
+.rspress-doc code {
+  border-radius: 4px !important;
+  padding: 4px 6px !important;
+}

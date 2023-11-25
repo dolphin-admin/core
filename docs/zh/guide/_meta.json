@@ -1,7 +1,14 @@
 [
-  { "type": "dir", "name": "getting-started", "label": "开始" },
-  { "type": "dir", "name": "react", "label": "React 版本", "collapsed": true },
-  { "type": "dir", "name": "vue", "label": "Vue 版本", "collapsed": true },
-  { "type": "dir", "name": "nest", "label": "Nest 服务端", "collapsed": true },
-  { "type": "dir", "name": "core", "label": "核心", "collapsed": true }
+  "index",
+  "getting-started",
+  "tech-stack",
+  "project-structure",
+  "dev-standard",
+  "features",
+  { "type": "divider" },
+  "env-setup",
+  "i18n",
+  "deploy",
+  { "type": "divider" },
+  "faq"
 ]

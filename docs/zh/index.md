@@ -3,15 +3,15 @@ pageType: home
 
 hero:
   name: Dolphin Admin
-  # text: 管理系统最佳实践
+  text: 管理系统最佳实践
   tagline: 开源、轻量级的后台管理系统
   actions:
     - theme: brand
       text: 开始
-      link: /zh/guide/getting-started/introduction
+      link: /zh/guide/index
     - theme: alt
       text: Github
-      link: https://github.com/bit-ocean-studio/dolphin-admin-core
+      link: https://github.com/bit-ocean-studio/
   image:
     src: /dolphin-admin.png
     alt: Dolphin Admin Logo
@@ -25,4 +25,15 @@ features:
   - title: 免费、开源
     details: 不需要支付费用即可使用，商用仅需署名。
     icon: ✅
+  - title: React 版本预览
+    details: 基于 React 18，Vite，TypeScript，antd 5
+    icon: ⚛️
+    link: https://dolphin-admin-react.bit-ocean.studio
+  - title: Vue 版本预览
+    details: 基于 Vue 3，Vite，TypeScript，Naive UI
+    icon: 🍀
+    link: https://dolphin-admin-vue.bit-ocean.studio
+  - title: Nest 服务端
+    details: 基于 Nest, TypeScript, Prisma, PostgreSQL
+    icon: 🐱
 ---

@@ -1,5 +1,0 @@
-[
-  { "type": "dir", "name": "tech-stack", "label": "技术栈", "collapsed": true },
-  { "type": "dir", "name": "common", "label": "通用功能", "collapsed": true },
-  { "type": "dir", "name": "decorators", "label": "装饰器", "collapsed": true }
-]

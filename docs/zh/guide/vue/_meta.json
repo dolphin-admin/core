@@ -1,7 +1,0 @@
-[
-  "tech-stack",
-  "structure",
-  "dev-standard",
-  { "type": "dir", "name": "common", "label": "通用功能" },
-  "deploy"
-]

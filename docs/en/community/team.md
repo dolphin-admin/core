@@ -6,4 +6,4 @@
 
 Bruce: The author of [Dolphin Admin](https://dolphin-admin-react.bit-ocean.studio) and the founder of [Bit Ocean](https://github.com/bit-ocean-studio/) Org.
 
-> Now I'm focusing on React & React Native Open Source ecosystem.
+> Now focusing on React & React Native Open Source ecosystem.

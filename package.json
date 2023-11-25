@@ -22,14 +22,14 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "rspress": "^1.7.0"
+    "rspress": "^1.7.4"
   },
   "devDependencies": {
     "@brucesong/eslint-config-ts": "^1.0.15",
     "@changesets/cli": "^2.26.2",
-    "@commitlint/cli": "^18.4.2",
-    "@commitlint/config-conventional": "^18.4.2",
-    "@types/node": "^20.9.2",
+    "@commitlint/cli": "^18.4.3",
+    "@commitlint/config-conventional": "^18.4.3",
+    "@types/node": "^20.10.0",
     "commitizen": "^4.3.0",
     "cspell": "^8.0.0",
     "cz-git": "^1.7.1",
