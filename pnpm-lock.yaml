@@ -64,8 +64,8 @@ importers:
         specifier: ^3.5.0
         version: 3.5.0(rollup@3.29.4)
       unplugin-auto-import:
-        specifier: ^0.16.7
-        version: 0.16.7(rollup@3.29.4)
+        specifier: ^0.17.0
+        version: 0.17.1(rollup@3.29.4)
 
   packages/bootstrap-animation:
     dependencies:
@@ -10654,8 +10654,8 @@ packages:
     resolution: {integrity: sha512-gptHNQghINnc/vTGIk0SOFGFNXw7JVrlRUtConJRlvaw6DuX0wO5Jeko9sWrMBhh+PsYAZ7oXAiOnf/UKogyiw==}
     engines: {node: '>= 10.0.0'}
 
-  /unplugin-auto-import@0.16.7(rollup@3.29.4):
-    resolution: {integrity: sha512-w7XmnRlchq6YUFJVFGSvG1T/6j8GrdYN6Em9Wf0Ye+HXgD/22kont+WnuCAA0UaUoxtuvRR1u/mXKy63g/hfqQ==}
+  /unplugin-auto-import@0.17.1(rollup@3.29.4):
+    resolution: {integrity: sha512-QvdJKtFK0COSuRXzVnwjG3ir870zVhdMg6O8GKG3UO/O5W4fmJm5h71QvzI7Gp8Sx0qfCvC3f+2v0Vm489fnqQ==}
     engines: {node: '>=14'}
     peerDependencies:
       '@nuxt/kit': ^3.2.2
