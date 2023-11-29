@@ -22,11 +22,11 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "rspress": "^1.7.4"
+    "rspress": "^1.7.5"
   },
   "devDependencies": {
     "@brucesong/eslint-config-ts": "^1.0.15",
-    "@changesets/cli": "^2.26.2",
+    "@changesets/cli": "^2.27.1",
     "@commitlint/cli": "^18.4.3",
     "@commitlint/config-conventional": "^18.4.3",
     "@types/node": "^20.10.0",
