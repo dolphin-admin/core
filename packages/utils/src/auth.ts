@@ -12,6 +12,12 @@ export class AuthUtils {
   private static ACCESS_TOKEN_KEY = 'access_token'
 
   /**
+   * 刷新令牌存储键名
+   * @default "refresh_token"
+   */
+  private static REFRESH_TOKEN_KEY = 'refresh_token'
+
+  /**
    * 记住密码相关信息存储键名
    * @default "login_account_data"
    */
@@ -51,10 +57,10 @@ export class AuthUtils {
    * @returns `localStorage` 中存储的访问令牌
    * @example
    * ```ts
-   * AuthUtils.getToken()
+   * AuthUtils.getAccessToken()
    * ```
    */
-  static getToken(): string {
+  static getAccessToken(): string {
     return localStorage.getItem(this.ACCESS_TOKEN_KEY) ?? ''
   }
 
@@ -70,7 +76,7 @@ export class AuthUtils {
    * ```
    */
   static getAuthorization(prefix: string = 'Bearer') {
-    return `${prefix} ${this.getToken()}`
+    return `${prefix} ${this.getAccessToken()}`
   }
 
   /**
@@ -79,23 +85,61 @@ export class AuthUtils {
    * @param token - 访问令牌
    * @example
    * ```ts
-   * AuthUtils.setToken("xxx")
+   * AuthUtils.setAccessToken("xxx")
    * ```
    */
-  static setToken(token: string) {
+  static setAccessToken(token: string) {
     localStorage.setItem(this.ACCESS_TOKEN_KEY, token)
   }
 
   /**
-   * 清除 token
+   * 清除访问令牌
    * @description 清除 `localStorage` 中存储的访问令牌
    * @example
    * ```ts
-   * AuthUtils.clearToken()
+   * AuthUtils.clearAccessToken()
    * ```
    */
-  static clearToken() {
+  static clearAccessToken() {
     localStorage.removeItem(this.ACCESS_TOKEN_KEY)
+  }
+
+  /**
+   * 获取刷新令牌
+   * @description 获取 `localStorage` 中存储的刷新令牌
+   * @returns `localStorage` 中存储的刷新令牌
+   * @example
+   * ```ts
+   * AuthUtils.getRefreshToken()
+   * ```
+   */
+  static getRefreshToken(): string {
+    return localStorage.getItem(this.REFRESH_TOKEN_KEY) ?? ''
+  }
+
+  /**
+   * 设置刷新令牌
+   * @description 设置 `localStorage` 中存储的刷新令牌
+   * @param token - 刷新令牌
+   * @example
+   * ```ts
+   * AuthUtils.setRefreshToken("xxx")
+   * ```
+   */
+  static setRefreshToken(token: string) {
+    localStorage.setItem(this.REFRESH_TOKEN_KEY, token)
+  }
+
+  /**
+   * 清除刷新令牌
+   * @description 清除 `localStorage` 中存储的刷新令牌
+   * @example
+   * ```ts
+   * AuthUtils.clearRefreshToken()
+   * ```
+   */
+  static clearRefreshToken() {
+    localStorage.removeItem(this.REFRESH_TOKEN_KEY)
   }
 
   /**

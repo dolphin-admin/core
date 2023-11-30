@@ -1,5 +1,11 @@
 # @dolphin-admin/utils
 
+## 0.0.18
+
+### Patch Changes
+
+- AuthUtils add refresh token
+
 ## 0.0.17
 
 ### Patch Changes
