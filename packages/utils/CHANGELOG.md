@@ -1,5 +1,11 @@
 # @dolphin-admin/utils
 
+## 0.0.19
+
+### Patch Changes
+
+- add i18n utils
+
 ## 0.0.18
 
 ### Patch Changes

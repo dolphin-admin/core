@@ -1,5 +1,11 @@
 # @dolphin-admin/bootstrap-animation
 
+## 0.0.6
+
+### Patch Changes
+
+- add i18n utils
+
 ## 0.0.5
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @dolphin-admin/auto-import
 
+## 0.0.12
+
+### Patch Changes
+
+- add i18n utils
+
 ## 0.0.11
 
 ### Patch Changes
