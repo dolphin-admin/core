@@ -1,5 +1,11 @@
 # @dolphin-admin/utils
 
+## 0.0.20
+
+### Patch Changes
+
+- fix function type export
+
 ## 0.0.19
 
 ### Patch Changes
