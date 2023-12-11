@@ -1,4 +1,4 @@
-import { Lang } from './types'
+import { Lang } from './enums'
 
 /**
  * 语言工具类
@@ -64,7 +64,7 @@ export class LangUtils {
    * const lang = LangUtils.getBrowserLang()
    * ```
    */
-  static getBrowserLang(): string {
+  static getBrowserLang(fallbackLang?: string): string {
     const lang = window.navigator.language
     if (lang.includes('zh')) {
       return Lang['zh-CN']
@@ -72,7 +72,7 @@ export class LangUtils {
     if (lang.includes('en')) {
       return Lang['en-US']
     }
-    return ''
+    return fallbackLang ?? ''
   }
 
   /**
@@ -80,15 +80,15 @@ export class LangUtils {
    * @description
    * 1. 优先使用 `localStorage` 中的 `lang`
    * 2. 其次使用浏览器语言
-   * 3. 都没有就默认中文
+   * 3. 都没有就返回空字符串
    * @returns 默认语言
    * @example
    * ```ts
    * const lang = LangUtils.getDefaultLang()
    * ```
    */
-  static getDefaultLang(): string {
-    return this.getLang() ?? this.getBrowserLang() ?? Lang['zh-CN']
+  static getDefaultLang(fallbackLang?: string): string {
+    return this.getLang() ?? this.getBrowserLang(fallbackLang)
   }
 
   /**
@@ -111,26 +111,24 @@ export class LangUtils {
    * ```
    */
   static initI18nObj() {
-    Object.values(Lang).reduce(
-      (acc, cur) => {
-        // eslint-disable-next-line no-param-reassign
-        acc[cur] = ''
-        return acc
-      },
-      {} as Record<Lang, string>
-    )
+    Object.values(Lang).reduce<Record<string, string>>((acc, cur) => {
+      // eslint-disable-next-line no-param-reassign
+      acc[cur] = ''
+      return acc
+    }, {})
   }
 
   /**
    * 遍历语言枚举
    * @param cb - 回调函数
    * @example
+   * 调用方式类似 map，数组限制为使用 Lang 枚举
    * ```ts
    * LangUtils.langMapTo(lang => {
    *  // ...
    * })
    */
-  static langMapTo<T = any>(cb: (lang: Lang) => T) {
+  static langMap<T>(cb: (lang: Lang) => T): T[] {
     return Object.values(Lang).map(cb)
   }
 }

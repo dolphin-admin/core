@@ -1,4 +1,4 @@
-import { Theme } from './types'
+import { Theme } from './enums'
 
 /**
  * 主题工具类
