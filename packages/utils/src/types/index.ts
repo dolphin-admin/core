@@ -1,5 +1,4 @@
 export * from './browser'
 export * from './function'
 export * from './lang'
-export * from './theme'
 export * from './time'

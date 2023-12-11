@@ -1,5 +1,11 @@
 # @dolphin-admin/utils
 
+## 0.0.21
+
+### Patch Changes
+
+- extract enums to independent dir
+
 ## 0.0.20
 
 ### Patch Changes
