@@ -102,33 +102,4 @@ export class LangUtils {
   static setHtmlLang(lang: string) {
     document.querySelector('html')?.setAttribute('lang', lang)
   }
-
-  /**
-   * 初始化国际化字段的对象
-   * @example
-   * ```ts
-   * const i18nObj = LangUtils.initI18nObj()
-   * ```
-   */
-  static initI18nObj() {
-    Object.values(Lang).reduce<Record<string, string>>((acc, cur) => {
-      // eslint-disable-next-line no-param-reassign
-      acc[cur] = ''
-      return acc
-    }, {})
-  }
-
-  /**
-   * 遍历语言枚举
-   * @param cb - 回调函数
-   * @example
-   * 调用方式类似 map，数组限制为使用 Lang 枚举
-   * ```ts
-   * LangUtils.langMapTo(lang => {
-   *  // ...
-   * })
-   */
-  static langMap<T>(cb: (lang: Lang) => T): T[] {
-    return Object.values(Lang).map(cb)
-  }
 }
