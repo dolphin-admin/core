@@ -1,5 +1,11 @@
 # @dolphin-admin/utils
 
+## 0.0.23
+
+### Patch Changes
+
+- add time utils
+
 ## 0.0.22
 
 ### Patch Changes

@@ -1,6 +1,6 @@
 import dayjs from 'dayjs'
 
-import type { TimeFormatter } from './types'
+import type { CommonTimeFormatter, LocalTimeFormatter } from './types'
 
 /**
  * 时间工具类
@@ -26,7 +26,10 @@ export class TimeUtils {
    * TimeUtils.formatTime(new Date(), 'YYYY-MM-DD HH:mm:ss')
    * ```
    */
-  static formatTime(time: string | number | Date, format: TimeFormatter = 'YYYY-MM-DD HH:mm:ss') {
+  static formatTime(
+    time?: dayjs.ConfigType,
+    format: CommonTimeFormatter | LocalTimeFormatter = 'YYYY-MM-DD HH:mm:ss'
+  ) {
     return dayjs(time).format(format)
   }
 
@@ -43,10 +46,26 @@ export class TimeUtils {
    * TimeUtils.getDuration('2023-09-20 00:00:00', '2023-09-20 23:59:59')
    * ```
    */
-  static getDuration(start?: string | Date, end?: string | Date): number {
+  static getDuration(start?: string | number | Date, end?: string | number | Date): number {
     if (!start || !end) return 0
-    const startTimestamp = typeof start === 'string' ? new Date(start).getTime() : start.getTime()
-    const endTimestamp = typeof start === 'string' ? new Date(end).getTime() : start.getTime()
+    const startTimestamp =
+      typeof start === 'string' || typeof start === 'number'
+        ? new Date(start).getTime()
+        : start.getTime()
+    const endTimestamp =
+      typeof end === 'string' || typeof end === 'number' ? new Date(end).getTime() : end.getTime()
     return endTimestamp - startTimestamp
+  }
+
+  /**
+   * 是否是今年
+   * @param time 时间
+   * @example
+   * ```ts
+   * TimeUtils.isCurrentYear('2023-09-20 00:00:00')
+   * ```
+   */
+  static isCurrentYear(time?: dayjs.ConfigType) {
+    return dayjs(time).isSame(new Date(), 'year')
   }
 }
