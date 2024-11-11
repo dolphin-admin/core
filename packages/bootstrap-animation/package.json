@@ -5,11 +5,11 @@
   "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bit-ocean-studio/dolphin-admin-core.git",
+    "url": "https://github.com/dolphin-admin/core.git",
     "directory": "packages/bootstrap-animation"
   },
-  "homepage": "https://github.com/bit-ocean-studio/dolphin-admin-core#readme",
-  "bugs": "https://github.com/bit-ocean-studio/dolphin-admin-core/issues",
+  "homepage": "https://github.com/dolphin-admin/core",
+  "bugs": "https://github.com/dolphin-admin/core/issues",
   "keywords": [
     "dolphin-admin",
     "bootstrap-animation",
