@@ -25,7 +25,7 @@
     "rspress": "^1.10.1"
   },
   "devDependencies": {
-    "@brucesong/eslint-config-ts": "^1.0.17",
+    "@bruce/eslint-config": "github:recallwei/eslint-config",
     "@changesets/cli": "^2.27.1",
     "@commitlint/cli": "^18.4.4",
     "@commitlint/config-conventional": "^18.4.4",
@@ -33,7 +33,7 @@
     "commitizen": "^4.3.0",
     "cspell": "^8.3.2",
     "cz-git": "^1.8.0",
-    "eslint": "^8.56.0",
+    "eslint": "^9.14.0",
     "husky": "^8.0.3",
     "lint-staged": "^15.2.0",
     "prettier": "^3.1.1",
